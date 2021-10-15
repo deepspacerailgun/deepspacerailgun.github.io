@@ -1,0 +1,92 @@
+/*
+  CSS heavily taken from mizlan (https://github.com/mizlan/mizlan.github.io/blob/main/style.css)
+*/
+:root {
+  /* Color scheme inspired by vim-pink-moon (https://github.com/sts10/vim-pink-moon) */
+  --bg: #2a2e38;
+  --a-link: #6F98B3;
+  --hl-text: #a6b8cc46;
+  --h1: #D08785;
+  --subtitle: #FCDBD9;
+  --bullet: #F0FDFF;
+  --a-hl: #5d5c6440;
+}
+
+::selection {
+  background: var(--hl-text);
+}
+::-moz-selection {
+  background: var(--hl-text);
+}
+
+html {
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Oxygen Mono', monospace;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  background-color: var(--bg);
+  font-size: 1.6rem;
+  color: var(--subtitle);
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--h1);
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 200;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+  padding-left: 10;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--bullet);
+}
+
+a:link, a:visited {
+  text-decoration: inherit;
+  color: var(--a-link);
+}
+a:hover {
+  background-color: var(--a-hl);
+}
+
+.content {
+  position: relative;
+  margin-top: 13%;
+  margin-bottom: 10%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background-color: var(--bg);
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 40rem) {
+  .content {
+    /* text-align: center; */
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  /* no need for bongo adjustments yet */
+  .bongo {
+    display: none;
+  }
+}
